@@ -1,0 +1,619 @@
+/*==========================================
+        InAmigos Foundation Website
+        Designed using HTML & CSS
+==========================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+:root{
+    --primary:#321E48;
+    --secondary:#42637E;
+    --accent:#65DCD5;
+    --light:#D9FFF4;
+    --white:#ffffff;
+    --text:#444;
+    --shadow:0 10px 30px rgba(0,0,0,0.12);
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--light);
+    color:var(--text);
+    line-height:1.7;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+section{
+    padding:80px 0;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.5rem;
+    color:var(--primary);
+    margin-bottom:20px;
+    font-weight:700;
+}
+
+.section-subtitle{
+    text-align:center;
+    max-width:750px;
+    margin:auto;
+    margin-bottom:50px;
+    color:#666;
+    font-size:1rem;
+}
+
+/*================ NAVBAR ================*/
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    background:var(--primary);
+    z-index:1000;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.navbar{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo h2{
+    color:white;
+    font-size:1.7rem;
+    font-weight:700;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    color:white;
+    font-size:15px;
+    transition:.3s;
+    font-weight:500;
+}
+
+.nav-links a:hover{
+    color:var(--accent);
+}
+
+/*================ HERO ================*/
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    padding-top:120px;
+}
+
+.hero-content{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h1{
+    color:white;
+    font-size:3.5rem;
+    line-height:1.2;
+    margin-bottom:25px;
+}
+
+.hero-text p{
+    color:#f5f5f5;
+    font-size:1.05rem;
+    margin-bottom:35px;
+}
+
+.hero-image{
+    flex:1;
+    text-align:center;
+}
+
+.hero-image img{
+    max-width:520px;
+    border-radius:25px;
+    box-shadow:var(--shadow);
+    transition:.5s;
+}
+
+.hero-image img:hover{
+    transform:scale(1.03);
+}
+
+/*================ BUTTONS ================*/
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:14px 30px;
+    background:var(--accent);
+    color:var(--primary);
+    border-radius:40px;
+    font-weight:600;
+    transition:.3s;
+    display:inline-block;
+}
+
+.btn:hover{
+    background:white;
+    transform:translateY(-4px);
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+.secondary-btn{
+    background:white;
+    color:var(--primary);
+}
+
+.secondary-btn:hover{
+    background:var(--accent);
+}
+
+/*================ ABOUT ================*/
+
+.about{
+    background:var(--light);
+}
+
+.about-intro{
+    max-width:900px;
+    margin:30px auto 60px;
+    text-align:center;
+    font-size:1.05rem;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.about-card{
+    background:white;
+    border-radius:18px;
+    padding:35px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    transition:.4s;
+}
+
+.about-card:hover{
+    transform:translateY(-8px);
+}
+
+.about-card i{
+    font-size:2.8rem;
+    color:var(--accent);
+    margin-bottom:20px;
+}
+
+.about-card h3{
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+/*================ ACHIEVEMENTS ================*/
+
+.achievements{
+    background:white;
+}
+
+.achievement-list{
+    max-width:950px;
+    margin:auto;
+}
+
+.achievement-item{
+    display:flex;
+    align-items:flex-start;
+    gap:20px;
+    background:var(--light);
+    margin-bottom:20px;
+    padding:22px;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.achievement-item:hover{
+    transform:translateX(8px);
+}
+
+.achievement-item i{
+    color:var(--accent);
+    font-size:1.4rem;
+    margin-top:5px;
+}
+
+.achievement-item p{
+    color:#444;
+    line-height:1.8;
+}
+
+
+/*================ PROJECTS SECTION ================*/
+
+.projects{
+    background:var(--light);
+}
+
+.project-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.project-card{
+    background:var(--white);
+    border-radius:20px;
+    padding:35px 30px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    transition:.4s ease;
+    border-bottom:5px solid transparent;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+    border-bottom:5px solid var(--accent);
+}
+
+.project-card i{
+    font-size:3rem;
+    color:var(--secondary);
+    margin-bottom:20px;
+}
+
+.project-card h3{
+    color:var(--primary);
+    margin-bottom:15px;
+    font-size:1.4rem;
+}
+
+.project-card p{
+    color:#555;
+    line-height:1.8;
+}
+
+
+/*================ IMPACT SECTION ================*/
+
+.impact{
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+}
+
+.impact .section-title{
+    color:white;
+}
+
+.impact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.impact-box{
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(6px);
+    border-radius:18px;
+    padding:40px;
+    text-align:center;
+    transition:.4s;
+}
+
+.impact-box:hover{
+    background:var(--accent);
+    transform:translateY(-8px);
+}
+
+.impact-box h3{
+    color:white;
+    font-size:2.7rem;
+    margin-bottom:10px;
+}
+
+.impact-box:hover h3{
+    color:var(--primary);
+}
+
+.impact-box p{
+    color:white;
+    font-weight:500;
+}
+
+.impact-box:hover p{
+    color:var(--primary);
+}
+
+
+/*================ GALLERY ================*/
+
+.gallery{
+    background:white;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    margin-top:45px;
+}
+
+.gallery-grid img{
+    height:260px;
+    width:100%;
+    object-fit:cover;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    transition:.4s;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.05);
+}
+
+
+/*================ CALL TO ACTION ================*/
+
+.cta{
+    background:linear-gradient(135deg,var(--secondary),var(--primary));
+    color:white;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:2.5rem;
+    margin-bottom:20px;
+}
+
+.cta p{
+    max-width:750px;
+    margin:0 auto 35px;
+    line-height:1.8;
+    font-size:1.05rem;
+}
+
+.cta-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.cta .btn{
+    background:var(--accent);
+}
+
+.cta .btn:hover{
+    background:white;
+}
+
+
+/*================ CONTACT ================*/
+
+.contact{
+    background:var(--light);
+    text-align:center;
+}
+
+.contact p{
+    max-width:700px;
+    margin:auto;
+    margin-bottom:40px;
+    font-size:1.05rem;
+}
+
+.social-links{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.social-links a{
+    width:65px;
+    height:65px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:white;
+    color:var(--primary);
+    font-size:1.7rem;
+    box-shadow:var(--shadow);
+    transition:.4s;
+}
+
+.social-links a:hover{
+    background:var(--accent);
+    transform:translateY(-8px) rotate(360deg);
+}
+
+
+/*================ FOOTER ================*/
+
+footer{
+    background:var(--primary);
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+}
+
+footer h3{
+    margin-bottom:15px;
+    font-size:1.8rem;
+}
+
+footer p{
+    margin:8px 0;
+    color:#ddd;
+}
+
+
+/*================ SCROLL BAR ================*/
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--secondary);
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+    background:var(--light);
+}
+
+
+/*================ RESPONSIVE ================*/
+
+@media(max-width:992px){
+
+.hero-content{
+    flex-direction:column-reverse;
+    text-align:center;
+}
+
+.hero-text h1{
+    font-size:2.8rem;
+}
+
+.hero-buttons{
+    justify-content:center;
+}
+
+.navbar{
+    flex-direction:column;
+    gap:15px;
+}
+
+.nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.section-title{
+    font-size:2rem;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+    padding-top:140px;
+}
+
+.hero-text h1{
+    font-size:2.3rem;
+}
+
+.hero-text p{
+    font-size:1rem;
+}
+
+.project-card,
+.about-card{
+    padding:25px;
+}
+
+.cta h2{
+    font-size:2rem;
+}
+
+.social-links a{
+    width:55px;
+    height:55px;
+    font-size:1.4rem;
+}
+
+.gallery-grid img{
+    height:220px;
+}
+
+}
+
+@media(max-width:500px){
+
+.logo h2{
+    font-size:1.3rem;
+}
+
+.nav-links{
+    gap:15px;
+}
+
+.nav-links a{
+    font-size:14px;
+}
+
+.hero-text h1{
+    font-size:1.9rem;
+}
+
+.section-title{
+    font-size:1.7rem;
+}
+
+.cta-buttons{
+    flex-direction:column;
+    align-items:center;
+}
+
+.btn{
+    width:220px;
+    text-align:center;
+}
+
+}
